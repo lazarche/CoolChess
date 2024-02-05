@@ -1,0 +1,175 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #2979FF
+;
+    color: #fff;
+}
+
+header {
+    background-color: #2c3e50;
+    padding: 15px;
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+footer {
+    text-align: left;
+    background-color: #2c3e50;
+    padding: 7px;
+}
+
+copyright-footer{
+    width: 100%;
+}
+
+footer span {
+    font-family: 'Didact Gothic', sans-serif;
+}
+
+header a {
+    font-family: 'Didact Gothic', sans-serif;
+    color: #fff;
+    text-decoration: none;
+    padding: 2px;
+    display: inline-block;
+    width: 100px;
+    font-size: 24px;
+    border-bottom: 2px solid transparent;
+}
+
+header a:hover {
+    border-bottom: 2px solid #fff;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.content {
+    text-align: center;
+}
+
+.matchhistory-container {
+    width: 740px;
+    height: 740px;
+    background-color: #2c3e50;
+
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 5px;
+}
+
+.matchhistory-container-inner {
+    width: 730px;
+    height: 640px;
+    background-color: #2c3e50;
+
+    justify-content: center;
+    align-items: center;
+
+    overflow: auto;
+}
+
+
+.stats-container {
+    width: 300px;
+    height: 740px;
+    margin: 10px;
+    margin-left: 30px;
+
+    display: inline;
+    justify-content: center;
+    align-items: flex-start;
+
+    background-color: #2c3e50;
+    border-radius: 5px;
+
+    font-size: 25px;
+    font-family: 'Didact Gothic', sans-serif;
+    color: white;
+    text-align: center;
+}
+
+.stats-title {
+    margin: 10px;
+    background-color: #fff;
+    border-radius: 5px;
+
+    font-size: 26px;
+    font-family: 'Didact Gothic', sans-serif;
+    color: black;
+    text-align: center;
+}
+
+.stats-main-title {
+    margin: 15px;
+    background-color: #fff;
+    border-radius: 5px;
+
+    font-size: 42px;
+    font-family: 'Didact Gothic', sans-serif;
+    color: black;
+    text-align: center;
+}
+
+.stats-separator{
+    margin: 10px;
+    width: 280px;
+    height: 3px;
+    background-color: #2979FF;
+    border-radius: 10px;
+}
+
+.matchhistory-match {
+    margin: 15px;
+    background-color: #2979FF;
+    border-radius: 5px;
+
+    justify-content: center;
+    align-items: flex-start;
+    text-align: left;
+
+    height: 84px;
+}
+
+.matchhistory-match-title {
+    margin: 10px 0px 0px 10px;
+    border-radius: 5px;
+    font-size: 35px;
+    font-family: 'Didact Gothic', sans-serif;
+    color: white;
+}
+
+.matchhistory-match-content {
+    border-radius: 5px;
+
+    margin-left: 10px;
+
+    font-size: 26px;
+    font-family: 'Didact Gothic', sans-serif;
+    color: white;
+}
+
+.matchhistory-export-button {
+    float: right;
+    margin: 5px;
+    font-size: 25px;
+    width: 46px;
+    height: 46px;
+    border-radius: 20px;
+}
+
+.matchhistory-match-export{
+    opacity: 0;
+}
+.matchhistory-match:hover .matchhistory-match-export{
+    opacity: 1;
+}

@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.21.0.final using JasperReports Library version 6.21.0-4f56c4f36cd19e17675219a9ac4692d5f0f13b06  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="MatchReport" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="1bff8d5e-d2f2-4d63-80dd-815f2956c55a">
+	<parameter name="whiteUsername" class="java.lang.String"/>
+	<parameter name="whiteStatus" class="java.lang.String"/>
+	<parameter name="blackUsername" class="java.lang.String"/>
+	<parameter name="blackStatus" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<field name="moveNum" class="java.lang.Integer"/>
+	<field name="whiteMove" class="java.lang.String"/>
+	<field name="blackMove" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="183" splitType="Stretch">
+			<rectangle radius="5">
+				<reportElement x="30" y="90" width="193" height="79" backcolor="#2979FF" uuid="08058af0-5f7a-465e-988a-53816e216876"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="172" y="4" width="210" height="50" uuid="b5eae676-b2bb-4ac0-b6aa-9f0d40e7aabd"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="26" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Cool Chess]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="127" y="50" width="300" height="30" uuid="1a46c914-2e42-4056-b0c0-7d15ee102cf2"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="19"/>
+				</textElement>
+				<text><![CDATA[Match Report]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="77" y="90" width="100" height="30" forecolor="#FFFFFF" uuid="c2fb72c6-ca7a-461a-9930-94c67c8a8558"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="16"/>
+				</textElement>
+				<text><![CDATA[ White Player]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="40" y="122" width="78" height="22" forecolor="#FFFFFF" uuid="6300f879-e00d-4eff-a043-196a71112c45"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[Username: ]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="118" y="122" width="100" height="22" forecolor="#FFFFFF" uuid="e7a5a81a-b884-456f-9ecb-bedb8de09ecf"/>
+				<textElement textAlignment="Left" verticalAlignment="Top">
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{whiteUsername}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="58" y="144" width="60" height="22" forecolor="#FFFFFF" uuid="0f07697a-5efc-45ea-9375-ff2f173dd142"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[Status:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="118" y="144" width="100" height="22" forecolor="#FFFFFF" uuid="6fbca76a-b6d1-4470-b179-e4bd7a849312"/>
+				<textElement textAlignment="Left" verticalAlignment="Top">
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{whiteStatus}]]></textFieldExpression>
+			</textField>
+			<rectangle radius="5">
+				<reportElement x="351" y="90" width="193" height="79" backcolor="#2979FF" uuid="fc0da6a6-f1f9-442c-9ab4-ee8ae787b9b0"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="398" y="90" width="100" height="30" forecolor="#030303" uuid="fd304e6e-30d5-4b52-972a-f72e624ec6dd"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="16"/>
+				</textElement>
+				<text><![CDATA[Black Player]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="361" y="122" width="78" height="22" forecolor="#030303" uuid="fc712e68-b498-4370-941f-1dbbcebe623a"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[Username: ]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="439" y="122" width="100" height="22" forecolor="#030303" uuid="2dcf9ca1-22f8-4cc6-9aa8-57b9c67081c1"/>
+				<textElement textAlignment="Left" verticalAlignment="Top">
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{blackUsername}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="379" y="144" width="60" height="22" forecolor="#030303" uuid="c73b85b0-3168-43a2-ab9a-0fe387da691d"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[Status:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="439" y="144" width="100" height="22" forecolor="#030303" uuid="3b0c0861-57be-477b-9b8b-9ee1734d76c6"/>
+				<textElement textAlignment="Left" verticalAlignment="Top">
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{blackStatus}]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="5" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="30" splitType="Stretch">
+			<staticText>
+				<reportElement mode="Opaque" x="38" y="0" width="70" height="30" forecolor="#FFFFFF" backcolor="#2C3E50" uuid="013613c6-8f72-4c52-a0be-e90ef617519f">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="b2b185a1-e8ab-48b0-acce-36c85e7311a8"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[No. Move]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="108" y="0" width="210" height="30" forecolor="#FFFFFF" backcolor="#2C3E50" uuid="edad2f6e-a339-41f7-a67d-7d76dbaf5c39">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="95423fcb-029b-41e0-890d-55a6de324051"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="16"/>
+				</textElement>
+				<text><![CDATA[White Move]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="318" y="0" width="210" height="30" forecolor="#FFFFFF" backcolor="#2C3E50" uuid="186a2bbf-8b09-4852-8d6a-da044f3cf868">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="95423fcb-029b-41e0-890d-55a6de324051"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="16"/>
+				</textElement>
+				<text><![CDATA[Black Move]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="34" splitType="Stretch">
+			<textField>
+				<reportElement mode="Opaque" x="38" y="0" width="70" height="30" forecolor="#FFFFFF" backcolor="#2979FF" uuid="06df6390-a0d5-45cd-82d2-91acb46c81b7">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="95423fcb-029b-41e0-890d-55a6de324051"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{moveNum}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement mode="Opaque" x="108" y="0" width="210" height="30" forecolor="#FFFFFF" backcolor="#2979FF" uuid="247b40c8-dfff-4cd9-966d-ba414fc0a5ac">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="95423fcb-029b-41e0-890d-55a6de324051"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{whiteMove}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement mode="Opaque" x="318" y="0" width="210" height="30" forecolor="#030303" backcolor="#2979FF" uuid="a2f45677-e202-44cf-b181-7028a700cac8">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="95423fcb-029b-41e0-890d-55a6de324051"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{blackMove}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<pageFooter>
+		<band height="42" splitType="Stretch">
+			<textField>
+				<reportElement x="450" y="12" width="100" height="30" uuid="23260a5a-727e-493d-9250-2b05a322eb76"/>
+				<textElement textAlignment="Right" verticalAlignment="Bottom"/>
+				<textFieldExpression><![CDATA[$V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band height="15" splitType="Stretch"/>
+	</summary>
+</jasperReport>

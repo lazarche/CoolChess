@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.21.0.final using JasperReports Library version 6.21.0-4f56c4f36cd19e17675219a9ac4692d5f0f13b06  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="SveRezervacije" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="1df6f0c6-6d66-44f0-98d3-52df2097ec81">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+	<parameter name="total" class="java.lang.Integer"/>
+	<parameter name="wins" class="java.lang.Integer"/>
+	<parameter name="loses" class="java.lang.Integer"/>
+	<parameter name="ratio" class="java.lang.Integer"/>
+	<parameter name="playerUsername" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<field name="idMatch" class="java.lang.Integer"/>
+	<field name="opponentUsername" class="java.lang.String"/>
+	<field name="numberOfMoves" class="java.lang.Integer"/>
+	<field name="date" class="java.lang.String"/>
+	<field name="status" class="java.lang.String"/>
+	<field name="time" class="java.lang.String"/>
+	<group name="Group1">
+		<groupExpression><![CDATA[$F{date}]]></groupExpression>
+		<groupHeader>
+			<band height="81">
+				<staticText>
+					<reportElement mode="Opaque" x="1" y="10" width="99" height="30" forecolor="#FFFFFF" backcolor="#2C3E50" uuid="77ca7bcd-3cfa-48f6-8c43-c65d800d56b1">
+						<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="4f2aa839-fed8-44a6-8023-0ef1e3bb9941"/>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Middle"/>
+					<text><![CDATA[Date]]></text>
+				</staticText>
+				<textField>
+					<reportElement mode="Opaque" x="100" y="10" width="156" height="30" forecolor="#FFFFFF" backcolor="#2979FF" uuid="2bd24c9b-ac68-49eb-81c4-668a5ea846d6">
+						<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="4f2aa839-fed8-44a6-8023-0ef1e3bb9941"/>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Middle"/>
+					<textFieldExpression><![CDATA[$F{date}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement mode="Opaque" x="416" y="51" width="134" height="30" forecolor="#FFFFFF" backcolor="#2C3E50" uuid="54c86164-e7b7-48e9-87ef-0568d15b8c51">
+						<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="98444bef-ea62-4500-b8b1-ae77e921873a"/>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Middle"/>
+					<text><![CDATA[Status]]></text>
+				</staticText>
+				<staticText>
+					<reportElement mode="Opaque" x="260" y="51" width="157" height="30" forecolor="#FFFFFF" backcolor="#2C3E50" uuid="596f0662-4de8-4f90-88c5-10dd9330f01e">
+						<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="4f2aa839-fed8-44a6-8023-0ef1e3bb9941"/>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Middle"/>
+					<text><![CDATA[Time]]></text>
+				</staticText>
+				<staticText>
+					<reportElement mode="Opaque" x="190" y="51" width="70" height="30" forecolor="#FFFFFF" backcolor="#2C3E50" uuid="e81620b5-3a83-4ca2-9101-83a43a8a3928">
+						<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="2652b3b3-f1a8-489c-b36a-5e7e922424b0"/>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Middle"/>
+					<text><![CDATA[Moves]]></text>
+				</staticText>
+				<staticText>
+					<reportElement mode="Opaque" x="70" y="51" width="120" height="30" forecolor="#FFFFFF" backcolor="#2C3E50" uuid="d044bc2e-8227-45a6-b201-937c5c5225d0">
+						<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="95423fcb-029b-41e0-890d-55a6de324051"/>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Middle"/>
+					<text><![CDATA[Opponent]]></text>
+				</staticText>
+				<staticText>
+					<reportElement mode="Opaque" x="0" y="51" width="70" height="30" forecolor="#FFFFFF" backcolor="#2C3E50" uuid="d0dc5dfe-4e38-4e98-9a5a-0369b1a2fd0c">
+						<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="b2b185a1-e8ab-48b0-acce-36c85e7311a8"/>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Middle"/>
+					<text><![CDATA[Match ID]]></text>
+				</staticText>
+			</band>
+		</groupHeader>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="88" splitType="Stretch">
+			<staticText>
+				<reportElement x="172" y="4" width="210" height="50" uuid="3931838c-11a7-4a48-a9eb-cf4dcbb04c5b"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="26" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Cool Chess]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="70" y="50" width="300" height="30" uuid="13225be5-22a4-4eef-afbf-c988ae375354"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="19"/>
+				</textElement>
+				<text><![CDATA[Match History for Player:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="341" y="50" width="168" height="30" uuid="2e90d054-8bc3-445b-a927-6cd0ead86130"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font size="19"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{playerUsername}]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+	<detail>
+		<band height="33" splitType="Stretch">
+			<textField>
+				<reportElement mode="Opaque" x="70" y="0" width="120" height="30" forecolor="#FFFFFF" backcolor="#2979FF" uuid="c4669fa7-b55b-4ef6-82f4-6f4572465ad3">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="95423fcb-029b-41e0-890d-55a6de324051"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{opponentUsername}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement mode="Opaque" x="0" y="0" width="70" height="30" forecolor="#FFFFFF" backcolor="#2979FF" uuid="da86da6a-a4b5-41e4-b92e-858652351a38">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="b2b185a1-e8ab-48b0-acce-36c85e7311a8"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{idMatch}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement mode="Opaque" x="190" y="0" width="70" height="30" forecolor="#FFFFFF" backcolor="#2979FF" uuid="89beb5ae-1911-4a7e-b233-43ff475026fc">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="2652b3b3-f1a8-489c-b36a-5e7e922424b0"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{numberOfMoves}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement mode="Opaque" x="260" y="0" width="156" height="30" forecolor="#FFFFFF" backcolor="#2979FF" uuid="97d89316-75a5-4e02-97f6-68be7d14d50e">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="4f2aa839-fed8-44a6-8023-0ef1e3bb9941"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{time}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement mode="Opaque" x="416" y="0" width="134" height="30" forecolor="#FFFFFF" backcolor="#2979FF" uuid="78eb4d01-7315-46b4-b9a0-0eb36c1c37a4">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="98444bef-ea62-4500-b8b1-ae77e921873a"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{status}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<pageFooter>
+		<band height="43" splitType="Stretch">
+			<textField>
+				<reportElement x="450" y="6" width="100" height="30" uuid="3813958e-e98b-47a4-b17c-81c79e1ac4cf"/>
+				<textElement textAlignment="Right" verticalAlignment="Bottom"/>
+				<textFieldExpression><![CDATA[$V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band height="110" splitType="Stretch">
+			<staticText>
+				<reportElement x="70" y="43" width="139" height="30" uuid="581d7569-9958-457b-ad56-54137092b44e"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[Total games played:  ]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="210" y="43" width="100" height="30" uuid="bb627292-8254-450a-a7a4-77c782392aa0"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font size="13"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{total}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="176" y="10" width="203" height="30" uuid="1631d3af-2aee-40e2-8275-391aebb2a7e4"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="19"/>
+				</textElement>
+				<text><![CDATA[Stats]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="124" y="73" width="48" height="30" uuid="0a144873-7b4a-41bb-9e13-d1427ce99dc6"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[Wins:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="172" y="73" width="80" height="30" uuid="e2fd5413-2306-411f-8034-cadcd57194c3"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font size="13"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{wins}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="361" y="73" width="80" height="30" uuid="a156a3ed-e19c-4d00-9504-a1104ebba033"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font size="13"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{loses}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="310" y="73" width="48" height="30" uuid="f03563b0-ebb7-4821-9984-6ce1928f8b0a"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[Loses:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="290" y="43" width="71" height="30" uuid="08b19381-26c5-4b82-8d83-49220b801e8d"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[Win Ratio:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="361" y="43" width="50" height="30" uuid="dbf51a1f-d8be-45ff-bc1e-ae1a60977e7c"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font size="13"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{ratio}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="416" y="43" width="50" height="30" uuid="4a841a27-4ef3-451a-a357-9c28f45599cd"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[%]]></text>
+			</staticText>
+		</band>
+	</summary>
+</jasperReport>
